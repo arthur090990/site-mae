@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Dia da Mulher, Mãe 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #fff5f7 0%, #ffeef3 100%);
+      color: #4a2441;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(196, 93, 136, 0.12);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #d14d8b;
+    }
+
+    .menu {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #7b3d65;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #d14d8b;
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      min-height: 92vh;
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-text span {
+      display: inline-block;
+      background: #ffd9e9;
+      color: #c63e81;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      line-height: 1.1;
+      color: #8f2d61;
+      margin-bottom: 18px;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #6d4560;
+      max-width: 650px;
+      margin-bottom: 28px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f06292, #d14d8b);
+      color: white;
+      box-shadow: 0 10px 25px rgba(209, 77, 139, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #b53d77;
+      border: 2px solid #f3b8cf;
+    }
+
+    .hero-photo {
+      background: white;
+      padding: 14px;
+      border-radius: 28px;
+      box-shadow: 0 20px 40px rgba(195, 98, 139, 0.16);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      border-radius: 22px;
+      display: block;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 90px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.4rem;
+      color: #9e2f69;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #7a556b;
+      max-width: 760px;
+      margin: 0 auto 42px;
+      line-height: 1.8;
+    }
+
+    .message-box {
+      background: white;
+      padding: 34px;
+      border-radius: 26px;
+      box-shadow: 0 18px 38px rgba(195, 98, 139, 0.12);
+      line-height: 2;
+      color: #68475d;
+      font-size: 1.06rem;
+      border: 1px solid #ffdbe9;
+    }
+
+    .highlights {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .highlight-card {
+      background: linear-gradient(180deg, #ffffff 0%, #fff6f9 100%);
+      padding: 26px;
+      border-radius: 22px;
+      box-shadow: 0 14px 28px rgba(195, 98, 139, 0.08);
+      text-align: center;
+      border: 1px solid #ffe0eb;
+    }
+
+    .highlight-card h3 {
+      color: #c63e81;
+      margin: 12px 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .highlight-card p {
+      color: #73586a;
+      line-height: 1.7;
+    }
+
+    .icon {
+      font-size: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .photo-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 18px 34px rgba(195, 98, 139, 0.12);
+      border: 1px solid #ffe2ec;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-card .caption {
+      padding: 18px;
+      color: #7a5168;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    .reasons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .reason-card {
+      background: white;
+      padding: 28px;
+      border-radius: 22px;
+      box-shadow: 0 14px 30px rgba(195, 98, 139, 0.1);
+      border-left: 6px solid #f06b9b;
+    }
+
+    .reason-card h3 {
+      color: #b63873;
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+    }
+
+    .reason-card p {
+      color: #6f5163;
+      line-height: 1.8;
+    }
+
+    footer {
+      padding: 35px 20px 50px;
+      text-align: center;
+      color: #7f5f72;
+    }
+
+    footer strong {
+      color: #be3d79;
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text h1 {
+        font-size: 2.7rem;
+      }
+
+      .gallery,
+      .highlights,
+      .reasons {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo img {
+        height: 420px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      .menu {
+        justify-content: center;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-text p,
+      .message-box,
+      .photo-card .caption,
+      .reason-card p {
+        font-size: 0.98rem;
+      }
+
+      .hero-photo img,
+      .photo-card img {
+        height: 330px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">🌷 Para Minha Mãe</div>
+      <nav class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#mensagem">Mensagem</a>
+        <a href="#galeria">Fotos</a>
+        <a href="#motivos">Motivos</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-text">
+      <span>Feliz Dia da Mulher 💖</span>
+      <h1>Uma homenagem especial para a mulher mais importante da minha vida</h1>
+      <p>
+        Mãe, este site é uma forma simples, mas cheia de amor, para mostrar o quanto você é especial para mim.
+        Hoje celebramos sua força, sua beleza, sua dedicação e o carinho imenso que você espalha por onde passa.
+      </p>
+      <div class="buttons">
+        <a href="#mensagem" class="btn btn-primary">Ler homenagem</a>
+        <a href="#galeria" class="btn btn-secondary">Ver fotos</a>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="foto1.jpg" alt="Mãe e filho juntos" />
+    </div>
+  </section>
+
+  <section id="mensagem">
+    <h2 class="section-title">Uma mensagem para você, mãe</h2>
+    <p class="section-subtitle">
+      Você é exemplo de amor, coragem e cuidado. Em cada momento da minha vida, esteve presente com força e com um coração enorme.
+    </p>
+
+    <div class="message-box">
+      <p>
+        Mãe, você é uma mulher maravilhosa, guerreira e cheia de luz. Sua presença deixa tudo mais bonito, mais seguro e mais cheio de amor.
+        Neste Dia da Mulher, eu quero te agradecer por cada conselho, cada abraço, cada cuidado e por nunca desistir de mim.
+      </p>
+      <p>
+        Você merece todo o carinho do mundo, porque é uma pessoa incrível, forte e inspiradora. Que sua vida seja sempre iluminada,
+        cheia de saúde, paz, alegria e momentos lindos. Eu tenho muito orgulho de ser seu filho e vou sempre te amar.
+      </p>
+    </div>
+
+    <div class="highlights">
+      <div class="highlight-card">
+        <div class="icon">💖</div>
+        <h3>Amor</h3>
+        <p>Seu amor é o que me fortalece e me faz seguir em frente todos os dias.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="icon">🌹</div>
+        <h3>Beleza</h3>
+        <p>Sua beleza vai além da aparência, está no seu jeito de cuidar e de sorrir.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="icon">✨</div>
+        <h3>Força</h3>
+        <p>Você é exemplo de coragem, superação e determinação em todos os momentos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2 class="section-title">Nossos momentos especiais</h2>
+    <p class="section-subtitle">
+      Algumas fotos para lembrar momentos bonitos, simples e cheios de significado ao seu lado.
+    </p>
+
+    <div class="gallery">
+      <div class="photo-card">
+        <img src="foto1.jpg" alt="Mãe e filho sorrindo" />
+        <div class="caption">Um registro cheio de carinho, parceria e felicidade ao seu lado.</div>
+      </div>
+
+      <div class="photo-card">
+        <img src="foto2.jpg" alt="Momento especial em família" />
+        <div class="caption">Mais um momento especial que mostra como sua presença torna tudo mais bonito.</div>
+      </div>
+
+      <div class="photo-card">
+        <img src="foto3.jpg" alt="Passeio e lembrança feliz" />
+        <div class="caption">Lembranças que guardo com carinho e que representam o quanto você é importante.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="motivos">
+    <h2 class="section-title">Motivos para te homenagear hoje</h2>
+    <p class="section-subtitle">
+      Você merece todas as homenagens não só hoje, mas todos os dias da sua vida.
+    </p>
+
+    <div class="reasons">
+      <div class="reason-card">
+        <h3>Você é meu maior exemplo</h3>
+        <p>Com seu jeito de lutar pela vida e cuidar de quem ama, você me ensinou valores que vou levar para sempre.</p>
+      </div>
+
+      <div class="reason-card">
+        <h3>Seu carinho faz diferença</h3>
+        <p>Nos detalhes mais simples, você mostra um amor gigante que transforma qualquer dia difícil em algo mais leve.</p>
+      </div>
+
+      <div class="reason-card">
+        <h3>Seu sorriso ilumina tudo</h3>
+        <p>Você tem uma energia linda e um sorriso que passa paz, felicidade e faz qualquer lugar ficar mais especial.</p>
+      </div>
+
+      <div class="reason-card">
+        <h3>Você merece o melhor</h3>
+        <p>Neste Dia da Mulher, quero que você se sinta amada, valorizada e lembrada como a mulher incrível que você é.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Feito com muito amor para <strong>minha mãe</strong> no Dia da Mulher 🌷</p>
+    <p>Com carinho, do seu filho Arthur. 💕</p>
+  </footer>
+</body>
+</html>
